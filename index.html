@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratik's Web Portfolio</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="styling.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="/">Pratik K</a>
+      <nav>
+        <a href="https://github.com/pratikk0501" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/pratik-kumar-4597371b5"
+          target="_blank"
+          ><i class="fa-brands fa-square-linkedin"></i
+        ></a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="intro-header">
+          <h1>Hi there! I am Pratik...</h1>
+          <p>Full-Stack Developer and Data Scientist</p>
+        </div>
+        <h5 class="intro-description">
+          An IIT Bombay graduate specialising in full-stack development and
+          artificial intelligence. Based in Mumbai, I love to travel, swim, play
+          video games and build all sorts of fun and useful internet
+          applications and projects!
+        </h5>
+        <div class="links-container">
+          <i class="fa-solid link-arrow fa-arrow-right"></i>
+          <a target="_blank" href="mailto:kumarpratik553@gmail.com">Email me</a>
+          <a href="https://github.com/pratikk0501" target="_blank">GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/pratik-kumar-4597371b5"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+        <div id="play-game">
+          <button onclick="playGame()">Play Game</button>
+        </div>
+        <div style="display: none" class="color-div">
+          <h4>Pick a color</h4>
+          <p style="display: none">Amazing choice!...Play again?</p>
+          <input
+            type="color"
+            id="color-picker"
+            onchange="changeColor()"
+            value="#0084ff"
+          />
+          <button onclick="resetColor()" style="display: none">Reset</button>
+        </div>
+      </section>
+      <section>
+        <h2>Skillset</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>JavaScript</td>
+              <td>
+                ReactJS | React Native | NextJS | NodeJS & ExpressJS | SvelteKit
+                | Qwik
+              </td>
+            </tr>
+            <tr>
+              <td>Python</td>
+              <td>
+                PyTorch | Data Analysis | Tensorflow | Django | Scikit-Learn |
+                NumPy | Data Visualization
+              </td>
+            </tr>
+            <tr>
+              <td>Web</td>
+              <td>
+                CSS | TailwindCSS | Firebase | PostgreSQL | CI/CD | Git | Docker
+                | Kubernetes | AWS
+              </td>
+            </tr>
+            <tr>
+              <td>Design</td>
+              <td>Canvas | Pixlr | LaTex | Microsoft Paint</td>
+            </tr>
+            <tr>
+              <td>Other</td>
+              <td>Go | HTML | Microsoft Excel | SQL | R</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <!-- <div>
+          <button onclick="fullstack()">Full-Stack</button>
+          <button onclick="datascience()">Data Science</button>
+        </div> -->
+        <div style="display: block" class="cards-grid">
+          <h3>Full-Stack Projects</h3>
+          <br />
+          <div class="project-card">
+            <div>
+              <p>21<sup>st</sup> October, 2025</p>
+              <h4>MD Notes</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>NextJS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>ReactJS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Firebase</p>
+                </div>
+              </div>
+              <p>
+                A markdown notes app made with NextJS that handles
+                authentication and database handling through Firebase. Users can
+                execute CRUD actions on their notes and also view when they
+                edited it last.
+              </p>
+              <div class="project-links">
+                <a href="https://pratiks-notes-app.netlify.app/" target="_blank"
+                  >Live</a
+                >
+                <a
+                  href="https://github.com/pratikk0501/next-mdnotes"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="img-div">
+              <img
+                class="big-img"
+                src="./public/Screenshot (11).png"
+                alt="mdnotes-thumbnail"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="project-card">
+            <div>
+              <p>10<sup>th</sup> September, 2025</p>
+              <h4>Todo App with Email Reminders</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>Node JS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Express JS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>JWT</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Prisma</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>PostgreSQL</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Cron</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Docker</p>
+                </div>
+              </div>
+
+              <p>
+                A Dockerized and authentication-protected Todo App made using
+                NodeJS, ExpressJS, Node-Cron, Nodemailer, bcrypt, JWT
+                authentication, Prisma, and PostgreSQL. The app allows users to:
+              </p>
+              <ol>
+                <li><strong>Register</strong>: Create a new account.</li>
+                <li>
+                  <strong>Login/Logout</strong>: Authenticate and receive a JWT
+                  token; logout clears the token.
+                </li>
+                <li>
+                  <strong>Manage Todos</strong>: Perform auth-protected CRUD
+                  operations on their own todo tasks after logging in.
+                </li>
+                <li>
+                  <strong>Email Reminders</strong>: Receive email reminders for
+                  todo completion 30 mins before due time.
+                </li>
+              </ol>
+              <div class="project-links">
+                <a
+                  href="https://github.com/pratikk0501/todo-app-with-email-reminders"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="img-div">
+              <img
+                class="big-img"
+                src="./public/Screenshot (15).png"
+                alt="todoapp-thumbnail"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="project-card">
+            <div>
+              <p>17<sup>th</sup> July, 2025</p>
+              <h4>Logiscout | The Subscription Tracker</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>NextJS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>ReactJS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Firebase</p>
+                </div>
+              </div>
+              <p>
+                A minimalist Subscription Tracker made using NextJS that handles
+                authentication and database handling through Firebase. The app
+                allows users to perform CRUD operations on their subscriptions
+                and view analytics of all their subscriptions.
+              </p>
+              <div class="project-links">
+                <a href="https://pratiks-logiscout.netlify.app/" target="_blank"
+                  >Live</a
+                >
+                <a
+                  href="https://github.com/pratikk0501/subscription-tracker"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="img-div">
+              <img
+                class="big-img"
+                src="./public/Screenshot (12).png"
+                alt="logiscout-thumbnail"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="project-card">
+            <div>
+              <p>3<sup>rd</sup> June, 2025</p>
+              <h4>Shredstack | The Workout Planner</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>ReactJS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>LocalStorage</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Firebase</p>
+                </div>
+              </div>
+              <p>
+                A Simple Workout Training Planner app made with ReactJS with
+                data caching managed by the browser's local storage. The app
+                allows users to follow a 30-day workout plan with daily
+                exercises and track their progress.
+              </p>
+              <div class="project-links">
+                <a href="https://shredstack.netlify.app/" target="_blank"
+                  >Live</a
+                >
+                <a
+                  href="https://github.com/pratikk0501/workout-planner"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="img-div">
+              <img
+                class="big-img"
+                src="./public/Screenshot (13).png"
+                alt="shredstack-thumbnail"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="project-card">
+            <div>
+              <p>28<sup>th</sup> April, 2025</p>
+              <h4>Caffeinator | The Caffeine Tracker</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>ReactJS</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Firebase</p>
+                </div>
+              </div>
+              <p>
+                A Simple Caffeine Tracker app made using ReactJS that handles
+                authentication and database handling through Firebase. Users can
+                add details of their coffee consumptions and view analytics of
+                their caffeine intake while also tracking their spending.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://pratiks-caffeine-tracker.netlify.app/"
+                  target="_blank"
+                  >Live</a
+                >
+                <a
+                  href="https://github.com/pratikk0501/react-caffeine-tracker"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="img-div">
+              <img
+                class="big-img"
+                src="./public/Screenshot (14).png"
+                alt="caffeinator-thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+        <div style="display: none" class="cards-grid-secondary">
+          <h3>Data Science Projects</h3>
+          <br />
+          <div class="project-card">
+            <div>
+              <p>Date</p>
+              <h4>Project Name</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+              </div>
+              <p>Project Description</p>
+              <div class="project-links">
+                <a href="" target="_blank">GitHub</a>
+              </div>
+            </div>
+            <div class="img-div">
+              <img class="big-img" src="" alt="" />
+            </div>
+          </div>
+          <div class="project-card">
+            <div>
+              <p>Date</p>
+              <h4>Project Name</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+              </div>
+              <p>Project Description</p>
+              <div class="project-links">
+                <a href="" target="_blank">GitHub</a>
+              </div>
+            </div>
+            <div class="img-div">
+              <img class="big-img" src="" alt="" />
+            </div>
+          </div>
+          <div class="project-card">
+            <div>
+              <p>Date</p>
+              <h4>Project Name</h4>
+              <div class="tech-list">
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+                <div class="card-button-secondary">
+                  <p>Skill</p>
+                </div>
+              </div>
+              <p>Project Description</p>
+              <div class="project-links">
+                <a href="" target="_blank">GitHub</a>
+              </div>
+            </div>
+            <div class="img-div">
+              <img class="big-img" src="" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        By <a target="_blank" href="/">Pratik</a>, ⭐ the
+        <a target="_blank" href="/">repo</a> on
+        <a target="_blank" href="https://github.com/pratikk0501">GitHub</a>
+      </p>
+    </footer>
+    <script>
+      const body = document.querySelector("body");
+      const colorDiv = document.querySelector(".color-div");
+      const hiddenText = document.querySelector(".color-div p");
+      const gameHeading = document.querySelector(".color-div h4");
+      const resetBtn = document.querySelector(".color-div button");
+      const colorInput = document.getElementById("color-picker");
+      const playBtn = document.getElementById("play-game");
+      const full_stack = document.querySelector(".cards-grid");
+      const data_science = document.querySelector(".cards-grid-secondary");
+
+      function playGame() {
+        colorDiv.style.display = "block";
+        playBtn.style.display = "none";
+      }
+
+      function changeColor() {
+        const selectedColor = colorInput.value;
+        body.style.background = selectedColor;
+        resetBtn.style.display = "block";
+        hiddenText.style.display = "block";
+        gameHeading.style.display = "none";
+        colorInput.style.display = "none";
+      }
+
+      function resetColor() {
+        body.style.background = "white";
+        colorInput.style.display = "block";
+        playBtn.style.display = "block";
+        gameHeading.style.display = "block";
+        hiddenText.style.display = "none";
+        resetBtn.style.display = "none";
+        colorDiv.style.display = "none";
+      }
+
+      function fullstack() {
+        full_stack.style.display = "block";
+        data_science.style.display = "none";
+      }
+
+      function datascience() {
+        full_stack.style.display = "none";
+        data_science.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
